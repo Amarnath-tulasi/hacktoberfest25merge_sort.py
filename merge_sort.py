@@ -7,7 +7,7 @@ def merge_sort(arr):
         merge_sort(R)
         i = j = k = 0
         while i < len(L) and j < len(R):
-            if L[i] > R[j]: 
+            if L[i] < R[j]: 
                 arr[k] = L[i]
                 i += 1
             else:
@@ -25,4 +25,3 @@ def merge_sort(arr):
     return arr
 
 print(merge_sort([38, 27, 43, 3, 9, 82, 10]))
-# Expected: [3, 9, 10, 27, 38, 43, 82]
